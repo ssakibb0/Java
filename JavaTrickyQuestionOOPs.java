@@ -9,16 +9,16 @@ class Parent {
 class Child extends Parent {
     // Overriding method with covariant return type (String is a subclass of Object)
     @Override
-    public String show() {
+    public Integer show() {
         System.out.println("Child show() method");
-        return "Child";
+        return 1;
     }
 }
 
 public class JavaTrickyQuestionOOPs {
     public static void main(String[] args) {
         Parent p1 = new Parent();
-        Parent p2 = new Child(); // Polymorphism
+        Child p2 = new Child(); // Polymorphism
         Child c1 = new Child();
 
         System.out.println(p1.show()); // Calls Parent's method
